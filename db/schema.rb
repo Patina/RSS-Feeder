@@ -27,16 +27,9 @@ ActiveRecord::Schema.define(version: 20150726190038) do
     t.string   "url"
     t.datetime "published_at"
     t.string   "guid"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "publication_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "feed_title"
-  end
-
-  create_table "publications", force: :cascade do |t|
-    t.string   "publication_title"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|
