@@ -1,0 +1,17 @@
+<h1><%= "All Articles Here" %></h1>
+<div id="all_articles">
+  <ul>  
+  <table>
+     
+  <% for entry in FeedEntry.all %>
+  <tr> 
+    <td><li><%= link_to h(entry.name), entry.url %></li></td>
+    <td><li><%= link_to h(entry.feed_title), entry.url %></li></td>
+    <td><%= link_to 'pick', users_path %></td>
+    <td><%= link_to 'delete', articles_path, method: :delete, data: {confirm: "Are you sure?"} %></td>
+  <% end %>
+  </tr>
+    </table>
+  </ul>
+</div>
+
